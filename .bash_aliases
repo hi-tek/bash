@@ -15,7 +15,7 @@ ll(){
 		cd $1
 	fi
 
-	ls -FGlhp
+	ls -lh --group-directories-first
 }
 
 alias ll..='ll ..'
@@ -27,7 +27,7 @@ lll(){
 		cd $1
 	fi
 
-	ls -FGlAhp
+	ls -lAh --group-directories-first
 }
 
 # Colors
