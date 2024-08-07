@@ -28,9 +28,11 @@ lll(){
 	ls -lAh --group-directories-first
 }
 
+# to-webserver: upload a file to the web server
+alias towebserver='function _to_webserver() { scp "$1" johan@web01.mindpoint.se:/websites/"$2"; }; _to_webserver'
+
 # Colors and prompt
-export LS_COLORS="di=93:ln=35:so=32:pi=33:ex=91:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43:*.deb=01;36:*.rpm=01;36:*.zip=01;36:*.gz=01;36:*.7z=01;36:*.rar=01;36:*.tar=01;36"
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;90m\]\u@\h\[\033[00m\]:\[\033[01;93m\]\w\[\033[00m\]\$ '
+export LSCOLORS=Dxfxcxdxbxegedabagacad
 
 # Custom additions in separate optional files
 if [ -f ~/.bash_aliases_extras ]; then
