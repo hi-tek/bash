@@ -10,7 +10,7 @@ unalias ll
 ll(){
 	if [ "$1" != "" ];
 	then
-		cd $1
+		cd "$(echo "$1" | tr -d '\\')"
 	fi
 
 	ls -lh --group-directories-first
@@ -22,7 +22,7 @@ alias ll..='ll ..'
 lll(){
 	if [ "$1" != "" ];
 	then
-		cd $1
+		cd "$(echo "$1" | tr -d '\\')"
 	fi
 
 	ls -lAh --group-directories-first
