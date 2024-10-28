@@ -28,9 +28,6 @@ lll(){
 	ls -lAh --group-directories-first
 }
 
-# to-webserver: upload a file to the web server
-alias towebserver='function _to_webserver() { scp "$1" johan@web01.mindpoint.se:/websites/"$2"; }; _to_webserver'
-
 # Colors and prompt
 export LSCOLORS=Dxfxcxdxbxegedabagacad
 
