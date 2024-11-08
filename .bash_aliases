@@ -1,7 +1,7 @@
 alias cd..='cd ../'
 alias ..='cd ../'
 alias ...='cd ../../'
-alias myip='curl https://api.ipify.org'
+alias myip='{ curl https://api.ipify.org; echo -e "\n"; }'
 
 # ll is often defined in .bashrc
 unalias ll
